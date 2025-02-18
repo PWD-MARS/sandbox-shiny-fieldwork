@@ -559,7 +559,6 @@ SRTServer <- function(id, parent_session, poolConn, srt_types, con_phase, sys_id
                                                    "photos_uploaded", "sensor_collection_date", "qaqc_complete",
                                                    "srt_summary_date", "turnaround_days", "srt_summary", "sensor_deployed"))
       
-      observe(glimpse(rv$all_srt_table()))
       output$all_srt_table <- renderReactable(
         reactable(rv$all_srt_table()[, 1:15], 
                   columns = list(
